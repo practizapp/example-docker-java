@@ -1,31 +1,46 @@
-## What is it?
-This source code is an Spring Boot web application.
- 
-Tested with
-* Docker 19.03
-* Ubuntu 19
-* Java 8 or Java 11
-* Spring Boot 2.2.4.RELEASE
-* Maven
+## What is it ?
 
+This document whatever steps are necessary to get the
+application up and running.
 
-## How to run this?
+Things you may want to cover:
+
+* Ruby version
+
+* System dependencies
+
+* Configuration
+
+* Database creation
+
+* Database initialization
+
+* How to run the test suite
+
+* Services (job queues, cache servers, search engines, etc.)
+
+* Deployment instructions
+
+* ...
+
+## How to Usage
+
+` Refer to your Linux distribution documentation for how to install Ruby `
+
+## How to run this ?
 ```bash
-$ cd springboot-docker
-$ mvn package
-$ java -jar target/spring-boot-web.jar
+// dockerize
 
-  access http://localhost:8080
+// Create Docker Image
+$ sudo docker build -f Dockerfile -t rails-app:1.0 .
+$ sudo docker run -d -p 3000:3000 -t rails-app:1.0
 
-//dockerize
+    access http://localhost:3000
+```
 
-// create a docker image
-$ sudo docker build -t spring-boot:1.0 .
-// run it
-$ sudo docker run -d -p 8080:8080 -t spring-boot:1.0
-
-  access http://localhost:8080
-
+```
 // docker compose
 $ sudo docker-compose up -d
+
+    access http://localhost:3000
 ```
